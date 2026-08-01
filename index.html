@@ -9,10 +9,13 @@
     <script type="text/javascript" language="javascript" src="whitney.json"></script>
     
     <script type="text/javascript">
-        $.getJSON("whitney.json", function (data) {
-                var timeline_json = data;
-            window.timeline = new TL.Timeline('timeline-embed', timeline_json);
-            });
+        $.getJSON("whitney.json?" + Date.now(), function(data) {
+        window.timeline = new TL.Timeline("timeline-embed", data);
+        });
+        // $.getJSON("whitney.json", function (data) {
+        //         var timeline_json = data;
+        //     window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+        //     });
     </script>
 </head>
 <body>      
